@@ -201,7 +201,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\ema.jpg" />
+    <Content Include="Images\joulu.jpg" />
+    <Content Include="Images\paev.jpg" />
+    <Content Include="Images\sad.png" />
     <Content Include="Images\smile.jpg" />
+    <Content Include="Images\smile.png" />
+    <Content Include="Images\soberpaev.jpg" />
+    <Content Include="Images\uutast.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -303,7 +310,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61381</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44340/</IISUrl>
+          <IISUrl>https://localhost:44341/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

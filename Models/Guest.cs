@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
-namespace Peokutse.Models
+namespace Kutse_App.Models
 {
     public class Guest
     {
         [Required(ErrorMessage = "Sisestage nimi!")]
+        [StringLength(100, ErrorMessage = "Nimi ei saa olla pikem kui 100 tähemärki.")]
         public string Name { get; set; }
+
         [Required(ErrorMessage = "Sisestage email!")]
-        [RegularExpression(@".+\@.+\..+", ErrorMessage = "Valesti sisestatud email!")]
-
+        [EmailAddress(ErrorMessage = "Valesti sisestatud email!")]
         public string Email { get; set; }
+
         [Required(ErrorMessage = "Sisestage telefoni number!")]
-        [RegularExpression(@"\+372.+", ErrorMessage = "Numbri alguses peal olema +372")]
-
+        [RegularExpression(@"\+372.+", ErrorMessage = "Numbri alguses peab olema +372 ja järgneb 7 numbrit.")]
         public string Phone { get; set; }
-        [Required(ErrorMessage = "Sisestage oma valik!")]
 
+        [Required(ErrorMessage = "Sisestage oma valik!")]
         public bool? WillAttend { get; set; }
     }
 }

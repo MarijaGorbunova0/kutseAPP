@@ -1,4 +1,4 @@
-﻿﻿@model Peokutse.Models.Guest
+﻿﻿@model Kutse_App.Models.Guest
 
 @{
     ViewBag.Title = "Thanks";
@@ -12,15 +12,26 @@
     {
         @: Ootan sind kallis sõber!
         <p>
-            <img src="~/Images/smile.jpg" />
+            <img src="~/Images/smile.png" />
         </p>
     }
     else
     {
         @: Väga kurb uudis. Näeme hiljem!
         <p>
-            <img src="~/Images/smile.jpg" />
+            <img src="~/Images/sad.png" />
         </p>
     }
     @ViewBag.Message @*VievBag.Message - отчет об отправке письма с приглошением*@
+
+    @if (Model.WillAttend == true)
+    {
+        if (Model.WillAttend.HasValue && Model.WillAttend.Value)
+        {
+            <form method="post" action="@Url.Action("Ankeet")">
+                <input type="hidden" name="sendReminder" value="true" />
+                <button type="submit">Saada meeldetuletus</button>
+            </form>
+        }
+    }
 </div>

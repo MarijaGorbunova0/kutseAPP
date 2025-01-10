@@ -18,3 +18,39 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.jumbotron {
+    background-color: #17a2b8;
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+    .jumbotron h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: black;
+    }
+
+.message-container img {
+    max-width: 200px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.action-link .btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+    .action-link .btn:hover {
+        background-color: cornflowerblue;
+    }

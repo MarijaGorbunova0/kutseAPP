@@ -2,16 +2,15 @@
     ViewBag.Title = "Tere tulemast peole!";
 }
 
-<div class="jumbotron">
-    <h1> @ViewBag.Greeting , Kallis sõber!</h1>
-
+<div class="jumbotron text-center">
+    <h1>@ViewBag.Greeting, Kallis sõber!</h1>
 </div>
 
-<div>
-    @ViewBag.Message
-    <img src="~/Images/smile.jpg" />
+<div class="message-container text-center">
+    <p>@ViewBag.Message</p>
+    <img src="@ViewBag.HolidayImage" alt="Holiday Image" class="img-fluid" />
 </div>
-<div>
-    @Html.ActionLink("Vastan", "Ankeet", "Ankeet", new { @class = "btn btn-primary" })
 
+<div class="action-link text-center">
+    @Html.ActionLink("Vastan", "Ankeet", null, new { @class = "btn btn-success btn-lg" })
 </div>
