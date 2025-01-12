@@ -76,10 +76,10 @@ namespace Kutse_App.Controllers
                 WebMail.SmtpServer = "smtp.gmail.com";
                 WebMail.SmtpPort = 587;
                 WebMail.EnableSsl = true;
-                WebMail.UserName = "david.nikolajev07@gmail.com";
-                WebMail.Password = "azni mflj nrsq humz";
-                WebMail.From = "david.nikolajev07@gmail.com";
-                WebMail.Send("david.nikolajev07@gmail.com", "Vastus kutsele", guest.Name + " Vastus " + ((guest.WillAttend ?? false) ?
+                WebMail.UserName = "mariarapirovna@gmail.com";
+                WebMail.Password = "dxob enlh rjpj cnyk";
+                WebMail.From = "mariarapirovna@gmail.com";
+                WebMail.Send(guest.Email, "Vastus kutsele", guest.Name + " Vastus " + ((guest.WillAttend ?? false) ?
                     "tuleb poele " : "ei tule poele"));
                 ViewBag.Message = "Kiri on saatnud!";
 
@@ -130,10 +130,10 @@ namespace Kutse_App.Controllers
             WebMail.SmtpServer = "smtp.gmail.com";
             WebMail.SmtpPort = 587;
             WebMail.EnableSsl = true;
-            WebMail.UserName = "david.nikolajev07@gmail.com";
-            WebMail.Password = "azni mflj nrsq humz";
-            WebMail.From = "david.nikolajev07@gmail.com";
-            WebMail.Send("david.nikolajev07@gmail.com", "Vastus kutsele", guest.Name + " Vastus " + ((guest.WillAttend ?? false) ?
+            WebMail.UserName = "mariarapirovna@gmail.com";
+            WebMail.Password = "dxob enlh rjpj cnyk";
+            WebMail.From = "mariarapirovna@gmail.com";
+            WebMail.Send(guest.Email, "Vastus kutsele", guest.Name + " Vastus " + ((guest.WillAttend ?? false) ?
                 "tuleb poele " : "ei tule poele"));
             ViewBag.Message = "Kiri on saatnud!";
 
