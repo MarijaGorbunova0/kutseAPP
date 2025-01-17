@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
 using System.Configuration;
+using System.Collections;
 
 namespace Kutse_App.Controllers
 {
@@ -31,7 +32,7 @@ namespace Kutse_App.Controllers
                     break;
                 case 2:
                     holidayMessage = "Armastuse päev!";
-                    holidayImage = "../Images/soberpaev.jpg";
+                    holidayImage = "../Images/sopradepaev.jpg";
                     break;
                 case 5:
                     holidayMessage = "Head emadepäeva!";
@@ -138,5 +139,12 @@ namespace Kutse_App.Controllers
             ViewBag.Message = "Kiri on saatnud!";
 
         }
+        GuestContext db = new GuestContext();
+        public ActionResult Guests()
+        {
+            IEnumerable<Guest> guests = db.Guests;
+            return View(guests);
+        }
     }
 }
+  

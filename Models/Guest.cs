@@ -5,6 +5,7 @@ namespace Kutse_App.Models
 {
     public class Guest
     {
+        public int Id { get; set; }
         [Required(ErrorMessage = "Sisestage nimi!")]
         [StringLength(100, ErrorMessage = "Nimi ei saa olla pikem kui 100 tähemärki.")]
         public string Name { get; set; }
